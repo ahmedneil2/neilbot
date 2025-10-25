@@ -11,9 +11,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', '18117505'))
-API_HASH = environ.get('API_HASH', '1428e11bc3279a1193f47079c8d748e8')
-BOT_TOKEN = environ.get('BOT_TOKEN', "8383924215:AAFqlGWMTC9HIpX1GSAbARhdcR6YUyZEKXs")
+API_ID = int(environ.get('API_ID', '26617321'))
+API_HASH = environ.get('API_HASH', '40daa567bfe70fb71d9727c4a93b6503')
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
@@ -26,10 +26,10 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002634615614'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002506943014'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002862485705').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002638021400 -1002671899473 -1002607534796 -1002656224546 -1001727315752 -1002603049651 -1002507248656').split()]  # For Multiple Id Use One Space Between Each.
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
@@ -64,7 +64,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://neil:#mdsrabon13@cluster0.tpxnehg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://neilfaru5:tBkbbuc7MpkuZX6f@neil.mpfkk.mongodb.net/?retryWrites=true&w=majority&appName=neil")
 DATABASE_NAME = environ.get('DATABASE_NAME', "techvjclonefilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
@@ -286,6 +286,7 @@ ALLOW_PM_SEARCH = bool(environ.get('ALLOW_PM_SEARCH', True))  # Set True to allo
 # Channel ID example: -1001234567890 (Channel), Group ID: -1234567890 (Group)
 UPDATE_GROUP_ID = int(environ.get('UPDATE_GROUP_ID', '-1002966521473'))  # Channel/Group ID where notifications will be sent
 UPDATE_NOTIFICATIONS = bool(environ.get('UPDATE_NOTIFICATIONS', True))  # Enable/disable update notifications
+
 
 
 

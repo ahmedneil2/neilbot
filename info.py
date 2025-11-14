@@ -211,7 +211,7 @@ else:
     ON_HEROKU = False
 # Multiple streaming URLs through Cloudflare
 STREAM_URLS = [
-    "https://100files-drive-curly-bush-ec24.cinepixserver00.workers.dev/",
+    "https://vip-1-vps-twilight-violet-6b96.cinepixserver00.workers.dev/",
     "https://your-cloudflare-domain-2.workers.dev/"
 ]
 # Default URL if no specific one is chosen
@@ -286,6 +286,7 @@ ALLOW_PM_SEARCH = bool(environ.get('ALLOW_PM_SEARCH', True))  # Set True to allo
 # Channel ID example: -1001234567890 (Channel), Group ID: -1234567890 (Group)
 UPDATE_GROUP_ID = int(environ.get('UPDATE_GROUP_ID', '-1002966521473'))  # Channel/Group ID where notifications will be sent
 UPDATE_NOTIFICATIONS = bool(environ.get('UPDATE_NOTIFICATIONS', True))  # Enable/disable update notifications
+
 
 
 
